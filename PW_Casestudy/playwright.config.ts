@@ -40,12 +40,12 @@ export default defineConfig({
   projects: [
     {
       name: 'setup',
-      testMatch:'**/*.setup.ts'
+      testMatch:'**/*setup.ts'
     },
     {
       name: 'DemoBlaze',
       testMatch:'**/placeOrder.spec.ts',
-      dependencies: ['setup'], //- first time needed
+      dependencies: ['setup'],
 
       use: {...devices['Desktop Chrome'],
         storageState: STORAGE_STATE

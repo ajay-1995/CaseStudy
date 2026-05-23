@@ -9,19 +9,19 @@ export default class CheckOutPage{
     readonly month: Locator
     readonly year: Locator
     readonly purchase: Locator
-    readonly ok: Locator
+    readonly closeBtn: Locator
     
     
     constructor(page: Page) {
         this.page = page
-        this.name = this.page.getByPlaceholder('Name')
-        this.country = this.page.getByPlaceholder('Country')
-        this.city = this.page.getByPlaceholder('City')
-        this.creditcard = this.page.getByPlaceholder('Credit card')
-        this.month = this.page.getByPlaceholder('Month')
-        this.year = this.page.getByPlaceholder('Year')
-         this.purchase = this.page.getByRole('button', { name:'purchase'})
-          this.ok = this.page.getByRole('button', { name:'OK'})
+        this.name = page.getByRole('textbox', {name: 'Name'})
+        this.country = page.getByRole('textbox', { name: 'Country'})
+        this.city = page.getByRole('textbox', { name: 'city'})
+        this.creditcard = page.getByRole('textbox', {name: 'Credit card'})
+        this.month = page.getByRole('textbox', {name: 'Month'})
+        this.year = page.getByRole('textbox', {name: 'Year'})
+         this.purchase = page.getByRole('button', { name:'purchase'})
+          this.closeBtn = this.page.getByRole('button', { name:'Close'})
 
     }
     async checkOutitems(fname: string, cname: string, hcity: string, ccard: string, cmonth: string,   ) {
@@ -32,9 +32,5 @@ export default class CheckOutPage{
         await this.month.fill(cmonth)
         await this.city.fill(hcity)
         await this.purchase.click()
-}
-
-async finishorder(){
-    await this.ok.click()
 }
 }

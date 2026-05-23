@@ -13,8 +13,7 @@ test.describe('Placeorder Test....', () => {
      let cartPage: CartPage
      let checkOutPage: CheckOutPage
 
-        test.beforeEach(async ({ page }) =>
-{
+        test.beforeEach(async ({ page }) => {
         
        await page.goto('https://demoblaze.com/')
         listPage = new ProductListPage(page)
@@ -29,9 +28,9 @@ test.describe('Placeorder Test....', () => {
             await listPage.addToCart()
   })
       })
-      test('view cart', async({ page }) => {
+      test('View Cart', async({ page }) => {
             await listPage.viewCartPage()
-            await page.waitForTimeout(3000)
+            await page.waitForTimeout(30000)
       })
       test('DeleteItems', async ({ page }) =>{
             await listPage.viewCartPage()

@@ -9,6 +9,6 @@ setup('Demo balze test', async({page}) => {
     await page.getByRole('button', { name: 'Log in' }).click();
     await expect(page.getByRole('link', {name: 'Welcome ajay26'})).toBeVisible();
     await page.context().storageState({path: STORAGE_STATE})
-})
+});
 
 
