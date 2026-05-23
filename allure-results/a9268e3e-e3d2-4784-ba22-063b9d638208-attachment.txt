@@ -1,0 +1,9 @@
+200
+{
+  id: 9223372036854776000,
+  category: { id: 0, name: 'string' },
+  name: 'doggie',
+  photoUrls: [ 'string' ],
+  tags: [ { id: 0, name: 'string' }, { id: 1, name: 'Golden' } ],
+  status: 'available'
+}
