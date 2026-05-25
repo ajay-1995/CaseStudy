@@ -8,7 +8,7 @@ export default class ProductListPage {
     constructor(page: Page) {
         this.page = page
         this.addToBtn = this.page.getByRole('button', { name: 'Add to cart'})
-        this.cartLink = this.page.getByRole('link', { name: 'cart', exact: true})
+        this.cartLink = this.page.getByRole('link', { name: 'Cart', exact: true})
         }
 
         async addToCart(){

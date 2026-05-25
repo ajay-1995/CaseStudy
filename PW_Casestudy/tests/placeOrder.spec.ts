@@ -30,7 +30,7 @@ test.describe('Placeorder Test....', () => {
       })
       test('View Cart', async({ page }) => {
             await listPage.viewCartPage()
-            await page.waitForTimeout(30000)
+            await page.waitForTimeout(3000)
       })
       test('DeleteItems', async ({ page }) =>{
             await listPage.viewCartPage()

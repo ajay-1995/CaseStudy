@@ -24,4 +24,4 @@ export default class CartPage {
         await deletebuttons.nth(index).click()
         this.page.waitForTimeout(2000)
 }
- }
+}
